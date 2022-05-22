@@ -15,7 +15,7 @@ function Home({ setIsAuth }) {
     <div className='loginPage'>
         <p>Login with google</p>
         <button className='login-with-google-btn' onClick={ signInWithGoogle }>
-            Sign in
+            Sign in with google
         </button>
     </div>
 
