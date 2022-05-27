@@ -16,10 +16,10 @@ function App() {
     <BrowserRouter>
       <Layout>
         <Routes>
-          <Route exact path="/" element={<Home setIsAuth={setIsAuth} />} />
-          <Route path="/blog" element={<Blogs />} />
+          <Route exact path="/home" element={<Home setIsAuth={setIsAuth} />} />
+          <Route path="/" element={<Blogs />} />
           <Route path="/category/:id" element={<Category />} />
-          <Route path="/blog/:id" element={<BlogDetail />} />
+          <Route path="/:id" element={<BlogDetail />} />
         </Routes>
       </Layout>
     </BrowserRouter>
