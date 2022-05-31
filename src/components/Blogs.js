@@ -8,7 +8,7 @@ function Blogs() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get("http://127.0.0.1:8000/api/blog/featured");
+        const res = await axios.get("https://djangoephu.herokuapp.com/api/blog/featured");
         setFeatured(res.data[0]);
       } catch (err) {}
     };
@@ -18,7 +18,7 @@ function Blogs() {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const res = await axios.get("http://127.0.0.1:8000/api/blog/");
+        const res = await axios.get("https://djangoephu.herokuapp.com/api/blog/");
         setBlog(res.data);
       } catch (err) {}
     };
