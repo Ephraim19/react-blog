@@ -31,11 +31,11 @@ const BlogDetail = (props) => {
   return (
     <div className="container mt-3">
       <h1 className="display-2">{blog.title}</h1>
-      <h2 className="text-muted mt-3">
+      <p className="text-muted mt-3">
         Category: {capitalizeFirstLetter(blog.category)}
-      </h2>
+      </p>
       <h4>
-        {blog.month} {blog.day}
+        {blog.month} {blog.day}, {blog.year}
       </h4>
       <div className="mt-5 mb-5" dangerouslySetInnerHTML={createBlog()} />
       <hr />
