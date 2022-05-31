@@ -34,10 +34,10 @@ const BlogDetail = (props) => {
       <p className="text-muted mt-3">
         Category: {capitalizeFirstLetter(blog.category)}
       </p>
-      <p className="text-muted mt-1">
+      <p className="text-muted mt-0">
         {blog.month} {blog.day}, {blog.year}
       </p>
-      <div className="mt-5 mb-5" dangerouslySetInnerHTML={createBlog()} />
+      <div className="mt-3 mb-3" dangerouslySetInnerHTML={createBlog()} />
       <hr />
       <p className="lead mb-5">
         <Link to="/" className="font-weight-bold">
