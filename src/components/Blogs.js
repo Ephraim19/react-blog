@@ -43,7 +43,7 @@ function Blogs() {
             </strong>
             <h3 className="mb-0">{blogPost.title}</h3>
             <div className="mb-1 text-muted">
-              {blogPost.month} {blogPost.day}
+              {blogPost.month} {blogPost.day}, {blogPost.year}
             </div>
             <p className="card-text mb-auto">{blogPost.excerpt}</p>
             <Link to={`/${blogPost.slug}`} className="stretched-link">
