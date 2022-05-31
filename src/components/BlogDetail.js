@@ -34,7 +34,7 @@ const BlogDetail = (props) => {
       <p className="text-muted mt-3">
         Category: {capitalizeFirstLetter(blog.category)}
       </p>
-      <p "text-mted mt-1">
+      <p className="text-muted mt-1">
         {blog.month} {blog.day}, {blog.year}
       </p>
       <div className="mt-5 mb-5" dangerouslySetInnerHTML={createBlog()} />
