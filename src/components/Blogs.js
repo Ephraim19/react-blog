@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+
 function Blogs() {
   const [blog, setBlog] = useState([]);
   const [featured, setFeatured] = useState([]);
@@ -8,7 +9,9 @@ function Blogs() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get("https://djangoephu.herokuapp.com/api/blog/featured");
+        const res = await axios.get(
+          "https://djangoephu.herokuapp.com/api/blog/featured"
+        );
         setFeatured(res.data[0]);
       } catch (err) {}
     };
@@ -18,7 +21,9 @@ function Blogs() {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const res = await axios.get("https://djangoephu.herokuapp.com/api/blog/");
+        const res = await axios.get(
+          "https://djangoephu.herokuapp.com/api/blog/"
+        );
         setBlog(res.data);
       } catch (err) {}
     };
@@ -79,27 +84,26 @@ function Blogs() {
       <div className="nav-scroller py-1 mb-2">
         <nav className="nav d-flex justify-content-between">
           <Link className="p-2 text-muted" to="/category/algorithms">
-          Algorithms
+            Algorithms
           </Link>
           <Link className="p-2 text-muted" to="/category/data_structures">
-          Data structures
+            Data structures
           </Link>
           <Link className="p-2 text-muted" to="/category/computer_programming">
-          Computer programming
+            Computer programming
           </Link>
           <Link className="p-2 text-muted" to="/category/blockchain">
-          Blockchain
+            Blockchain
           </Link>
           <Link className="p-2 text-muted" to="/category/database">
-          Database
+            Database
           </Link>
           <Link className="p-2 text-muted" to="/category/seo">
-          SEO
+            SEO
           </Link>
           <Link className="p-2 text-muted" to="/category/news">
-          Technology news
+            Technology news
           </Link>
-          
         </nav>
       </div>
 
